@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main() {
+    char c;
+    printf("Enter an uppercase letter: ");
+    scanf(" %c", &c);
+    c = (c - 'A' + 'a') & 0xDF; // Masking with 0xDF (11011111) to set the lower 5 bits
+    printf("Lowercase letter: %c\n", c);
+    return 0;
+}
